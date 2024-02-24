@@ -1,0 +1,622 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #D7CEC7;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+  }
+
+nav {
+  padding: 1rem;
+  color: white;
+  background-color: rgb(0, 66, 30);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+main {
+  flex: 1;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/space-background.png");
+}
+
+.nav-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+nav h2{
+  align-self: end;
+}
+
+nav a{
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+ 
+ }
+
+.content {
+    padding-left: 1rem;
+    padding-top: 1rem;
+  }
+
+h3, h4, p {
+  margin-bottom: 1rem;
+}
+
+.content a{
+  text-decoration: none;
+  color: grey;
+}
+
+footer {
+    color: white;
+    background-color: rgb(0, 66, 30);
+    text-align: center;
+    padding: 1rem;
+}
+
+#story{
+ width: 50%;
+ margin: 1rem 0;
+}
+
+
+input, textarea, button{
+  font: inherit;
+}
+
+.new-form {
+  display: grid;
+  grid-template-columns: 60px 250px;
+  row-gap: 0.5rem;
+}
+
+.new-form input[type="submit"] {
+  width: 70px;
+  padding: 0.2em 0;
+  grid-column: 2/3;
+  justify-self: end;
+}
+
+button {
+  width: 60px;
+  padding:  0.1em 0;
+}
+
+
+:root{
+    --white-light: rgba(255, 255, 255, 0.5);
+    --alice-blue: #f8f9fa;
+    --carribean-green: #40c9a2;
+    --gray: #ededed;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+html {
+    height: 100%;
+}
+
+.wrapper{
+    width: 1170px;
+    margin: auto;
+}
+header, .setup {
+   /*background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/space-background.png");*/
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/browse-background.avif");
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+.Nav-Bar{
+    float: right;
+    list-style:none;
+    margin-top: 30px;
+}
+
+.Nav-Bar li{
+    display: inline-block;
+}
+
+.Nav-Bar li a {
+    color: #ffff;
+    text-decoration: none;
+    padding: 5px 20px;
+    font-family: 'sans-serif';
+    font-size: 17px;
+}
+
+
+.Nav-Bar li a:hover {
+    background: #fff;
+    color: #333;
+}
+
+.logo img{
+    width: 150px;
+    float: left;
+    height: auto;
+    filter: invert(100%);
+    margin-top: 12px;
+    margin-left: -100px;
+}
+
+.main-text{
+  position: absolute;
+
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+
+
+/* --- Content Planets Page Formatting Begin --- */
+
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 70%; 
+  margin: 20px auto;  
+  padding: 20px; 
+  max-width: 600px; 
+}
+
+
+
+.card img {
+  max-width: 100%; 
+  max-height: 250px; 
+  object-fit: cover; 
+  border-radius: 8px; 
+  display: block; 
+  margin: 0 auto; 
+}
+
+.card-info {
+  padding: 20px;
+  flex: 1; 
+}
+
+.card-info h1 {
+  margin: 0 0 10px 0;
+  color: #ffffff; 
+}
+
+.card-info p {
+  margin: 5px 0;
+  color: #666; 
+}
+
+.card-actions {
+  margin-top: 10px;
+}
+
+.card-actions button {
+  background-color: #333; 
+  color: white; 
+  border: none;
+  padding: 10px 15px; 
+  margin-right: 10px;
+  cursor: pointer;
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
+
+.card-actions button:hover {
+  background-color: #555; 
+}
+
+.card-actions button.delete {
+  width: auto; 
+}
+
+.card-actions button.single-back {
+  width: auto; 
+  float: right; 
+  margin-left: 20px; 
+}
+
+.deck {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 70%; 
+  flex-basis: calc(33.333% - 40px); 
+  margin: 20px; 
+  padding: 20px; 
+  max-width: 600px; 
+  overflow: hidden;
+}
+
+.decks-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-decoration: none;
+}
+
+.decks-text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 20px;
+}
+
+.deck-image {
+  max-width: 100%; 
+  max-height: 250px; 
+  object-fit: cover; 
+  border-radius: 8px; 
+  display: block; 
+  margin: 0 auto; 
+}
+
+.decks-header {
+  color: white;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+.deck-details {
+  padding: 15px;
+  color: black;
+}
+
+.deck > a {
+  text-decoration: none;
+  color: black; 
+}
+
+.deck-details .deck-name,
+.deck-details .deck-condition,
+.deck-details .deck-price {
+  
+  margin: auto;
+  text-align: center;
+}
+
+.submit-btn{
+  color: black;
+}
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .card {
+      width: calc(50% - 20px); /* Two cards per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+      width: 100%; /* One card per row */
+  }
+}
+
+
+/* --- Content ALL Planets Page Formatting START --- */
+
+
+
+.cards-container {
+ 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+
+.card-image {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  
+}
+
+.card-details {
+  padding: 15px;
+}
+
+.card a {
+  color: inherit; 
+  text-decoration: none; 
+}
+
+.card h2 {
+  font-size: 1.5em; 
+}
+
+.card p {
+  font-size: 1em;
+  color: #666;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .card {
+      width: calc(50% - 20px); /* Two cards per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+      width: 100%; /* One card per row */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Content ALL Planets Page Formatting End --- */
+
+
+
+
+
+
+
+
+
+
+
+
+.welcome-text a{
+  border: 1px solid #fff;
+  padding: 10px 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-top: 20px;
+  padding-bottom: 10px;
+  display: inline-block;
+  color: #fff;
+  font-family: "Casanova";
+  margin-top: -20px;
+}
+
+
+
+
+
+.welcome-text{
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    margin: 10% 30%;
+    text-align: center;
+    margin-top: -15px;
+}
+
+.welcome-text h1{
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 60px;
+    font-family: "Neon";
+    margin: 25px;
+}
+
+.welcome-text p{
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    font-family: "Casanova";
+}
+
+.welcome-text a{
+    border: 1px solid #fff;
+    padding: 10px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    display: inline-block;
+    color: #fff;
+    font-family: "Casanova";
+}
+
+.welcome-text a:hover{
+    background: #fff;
+    color: #333;
+
+}
+
+.search-form {
+    position: absolute;
+    margin-top: 25px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+}
+
+.search-form input {
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    margin-right: 5px;
+    font-family: "Casanova";
+    width: 200px;
+}
+
+.search-form button {
+    background: #fff;
+    color: #333;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: "Casanova";
+}
+
+footer{
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), black);
+    color: white;
+    width: 100%;
+    padding: 10px;
+    /* Keep Footer positioning */
+    justify-content: space-between;
+    
+    
+
+}
+
+.SellHeader{
+   max-height: 13vh; 
+   overflow: hidden;
+    
+
+    background-position: center;
+    background-size: cover;
+
+}
+
+.SellForm{
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto; 
+    text-align: center;
+    top: 55%;
+    left: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+
+}
+
+.input-group{
+    margin-bottom: 30px;
+    position: relative;
+
+}
+
+input, textarea{
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid #fff;
+    color: #fff;
+    background: transparent;
+    font-size: 15px;
+    font-family: "Casanova";
+}
+
+input:focus,
+textarea:focus {
+    background: white; 
+    color: #333;
+}
+
+label{
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    color: #fff;
+    cursor: text;
+    font-family: "Casanova";
+    transition: 0.2s;
+}
+
+.sellbtn{
+    padding: 10px 0;
+    color: #fff;
+    outline: none;
+    background: transparent;
+    border: 1px solid #fff;
+    width: 100%;
+    cursor: pointer;
+    font-family: "";
+}
+
+.sellbtn:hover{
+    color: #333;
+    background: #fff;
+}
+
+.back-button {
+  display: block;
+  margin-top: 12px; 
+  
+  text-align: center;
+  text-decoration: none;
+}
+
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label{
+    top: -35px;
+    font-size: 14px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.row .input-group{
+    flex-basis: 48%;
+}
+
+.login, .signup{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family: "Neon";
+    border: 1px solid #fff;
+    padding: 10px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 70px;
+    display: inline-block;
+}
+
+
+body{
+    font-family: 'Quicksand', sans-serif;
+}
+
+

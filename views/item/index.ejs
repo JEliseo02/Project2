@@ -1,0 +1,28 @@
+<%- include('../partials/sell-header.ejs') %>
+
+<main>
+    <div class="content-text">
+        <h1 class="decks-header">Select a Planet for more information</h1>
+        <div class="decks-container">
+            <% if (item.length) { %>
+                <% item.forEach(item => { %>
+                    <div class="deck">
+                        <a href="/items/<%= item.id %>">
+                            <img src="<%= item.image %>" alt="<%= item.title %>" class="deck-image">
+                            <div class="deck-details">
+                                <h2 class="deck-name"><%= item.title %></h2>
+                                <p class="deck-condition"><%= item.condition %> | <%= item.totalOffers %> offers</p>
+                                <p class="deck-price">$ <%= item.price %> </p>
+                                <!-- Include more details you want to show -->
+                            </div>
+                        </a>
+                    </div>
+                <% }); %>
+            <% } else { %>
+                <p>There are no Planets to display</p>
+            <% } %>
+        </div>
+    </div>
+</main>
+
+<%- include('../partials/footer.ejs') %>

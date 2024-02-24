@@ -1,0 +1,32 @@
+<%- include('../partials/sell-header.ejs')%>
+
+<main>
+    <div class="content">
+        <% if (item) { %> <!-- Checking if 'item' exists -->
+            <div class="card">
+                <img src="<%= item.image %>" alt="<%= item.title %>">
+                <div class="card-info">
+                    <h2><%= item.title %></h2>
+                    <p><strong>Condition:</strong> <%= item.condition %></p>
+                    <p><strong>Price:</strong> $<%= item.price %> | <%= item.totalOffers %> offers</p>
+                    <p><strong>Seller:</strong> <%= item.seller %></p>
+                    <p><strong>Description:</strong> <%= item.description %></p>
+                    <div class="card-actions">
+                        <form>
+                            <button type = "submit" formmethod = "GET" formaction="/items/<%= item.id%>/edit">Edit </button>
+                            <button class="delete" type = "submit" formmethod = "POST" formaction="/items/<%= item.id%>?_method=DELETE">Delete <i class="fa-solid fa-trash-can"></i></button>
+                        </form>
+                        <a href="/items">
+                            <button class="single-back"> <i class="fa-solid fa-arrow-left"></i> Back</button>
+                          </a>
+                    </div>
+                </div>
+            </div>
+        <% } else { %>
+            <p>No item to display</p>
+        <% } %>
+    </div>
+</main>
+
+    
+<%- include('../partials/footer.ejs')%>

@@ -1,0 +1,51 @@
+<%- include('../partials/sell-header.ejs')%>
+
+<main>
+    <form method="POST" action="/items/<%= item.id %>?_method=PUT" enctype="multipart/form-data" class="SellForm" >
+
+        <div class="row">
+            <div class="input-group">
+                <input type="text" id="name" name="seller" value="<%= item.seller %>" required>
+                <label for="name"><i class="fa-solid fa-user"></i> Sellers Owner's Name:</label>
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="Body-Name" name="title" value="<%= item.title %>" required>
+                <label for="Body-Name"><i class="fa-solid fa-globe"></i> Celestial Body's Name:</label>
+            </div>
+        </div>
+
+
+        <div class="input-group">
+            <input type="text" id="Habitable" name="condition" value="<%= item.condition %>" required>
+            <label for="Habitable"><i class="fa-solid fa-wrench"></i> Current Conditions of Celestial Body:</label>
+        </div>
+
+        <div class="input-group">
+            <input type="text" id="TotalOffers" name="totalOffers" value="<%= item.totalOffers %>" required>
+            <label for="TotalOffers"><i class="fa-brands fa-earlybirds"></i> Current Amount of Offers Celestial Body:</label>
+        </div>
+
+        <div class="input-group">
+            <input type="text" id="Price" name="price" value="<%= item.price %>" required>
+            <label for="Price"><i class="fa-solid fa-money-check-dollar"></i> Price:</label>
+        </div>
+
+        <div class="input-group">
+            <textarea name="description" id="message" rows="8" required><%= item.description %></textarea>
+            <label for="message"><i class="fa-solid fa-comment"></i> Description:</label>
+        </div>
+
+        <div class="input-group">
+            <label for="image">""</label>
+            <input type="file" id="Image" name="image" accept="image/*" >
+        </div>
+
+        <button class="sellbtn" type="submit">UPDATE FORM <i class="fa-solid fa-paper-plane"></i></button>
+        
+
+        <a href="/items/<%= item.id %>" class="sellbtn back-button"><i class="fa-solid fa-arrow-left"></i> BACK</a>
+        
+    </form>
+</main>
+<%- include('../partials/footer.ejs')%>
